@@ -1041,7 +1041,7 @@ class SetupDialog(ConnectDialog):
 		box.append(Gtk.Label(label=_("After installing the “Music Player Daemon” (<tt>mpd</tt>) the following two commands"\
 			" will configure and initialize a basic local instance"), use_markup=True, xalign=0, wrap=True))
 		box.append(CommandLabel('cat << EOF > ~/.mpd/mpd.conf\ndb_file\t\t"~/.mpd/database"\nstate_file\t"~/.mpd/state"\n\n'\
-			'audio_output {\n\ttype\t"pulse"\n\tname\t"Music"\n}\nEOF'))
+			'audio_output {\n\ttype\t"pipewire"\n\tname\t"PipeWire Sound Server"\n}\nEOF'))
 		box.append(CommandLabel("systemctl --user enable --now mpd.socket"))
 		self.set_content(box)
 
